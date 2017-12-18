@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/loadingImg.js"></script>
+	<script>
+		//所有的图片
+		const imgs=[
+			"https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/image/w%3D500/sign=02c51cbf50afa40f3cc6cedd9b65038c/267f9e2f070828386e057799b299a9014c08f137.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952966&di=89452abac1a1c350a4a68765c8d46b39&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2015%2F344%2F23%2FF14UT1K6T7AE_32.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952965&di=c79a58bf4d0fa16ae86b12c05d5e6421&imgtype=0&src=http%3A%2F%2Fi1.hexunimg.cn%2F2016-03-16%2F182779558.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952968&di=4704be1c8d5bf5df3d83e684e9547b28&imgtype=0&src=http%3A%2F%2Foss.laohucaijing.com%2FUserFiles%2FImage%2F201603%2F20160330111155221.png",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952968&di=ec5f795bd6ef53d7a499fb110e8989bf&imgtype=0&src=http%3A%2F%2Fupload.news.cecb2b.com%2F2016%2F0327%2F1459067610166.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952963&di=669ed5654237121d793c64395a34cb06&imgtype=0&src=http%3A%2F%2Fwww.cscec.com.cn%2FPortals%2F0%2Fimages%2Fbd.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952962&di=4b3d2c8a05766514802ffb859918e2fd&imgtype=0&src=http%3A%2F%2Fwww.cnhan.com%2Fgb%2Fimages%2F2006-07%2F12%2Fxin_030703121813533269513.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952961&di=30912e9be852cae1a2056bbbd07dfbc8&imgtype=0&src=http%3A%2F%2Fimgs.technews.cn%2Fwp-content%2Fuploads%2F2014%2F10%2FBaidu.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952961&di=9f341bdefc77b68befe3266b114951bb&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131213%2F20131213115637-1062134399.jpg",
+		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952960&di=0d36714689ca3db6031105a1f00568d5&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fbaike%2Fc0%253Dbaike80%252C5%252C5%252C80%252C26%2Fsign%3D9936dee58701a18be4e61a1dff466c6d%2F3801213fb80e7bec46055b282f2eb9389a506b1f.jpg"
+		];
+
+		/**
+		 * 调用插件加载
+		 */
+		$.loadingImg(imgs,{
+			//isOrder:true,
+			eachFn:function(count){
+				console.log('当前加载第'+count+'张图片')
+			},
+			allFn:function(){
+				console.log('全部加载完毕')
+			}
+		});
+	</script>
+</body>
+</html>
