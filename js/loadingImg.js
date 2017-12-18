@@ -79,10 +79,10 @@
 				imgObj.src=src;
 
 				$(imgObj).on('load error', function(){
-					//每加载完调用一次方法
+					//每加载完一次回调方法
 					opts.eachFn&&opts.eachFn(count);
 
-					if(count>=len-1){ //全部加载完毕
+					if(count>=len-1){ //全部加载完毕回调
 						opts.allFn&&opts.allFn();
 					};
 

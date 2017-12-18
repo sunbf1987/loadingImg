@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>loadingImg</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/loadingImg.js"></script>
 	<script>
-		//所有的图片
+		//所有的图片放在数组里面
 		const imgs=[
 			"https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/image/w%3D500/sign=02c51cbf50afa40f3cc6cedd9b65038c/267f9e2f070828386e057799b299a9014c08f137.jpg",
 		    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513253952966&di=89452abac1a1c350a4a68765c8d46b39&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2015%2F344%2F23%2FF14UT1K6T7AE_32.jpg",
@@ -26,11 +27,11 @@
 		 * 调用插件加载
 		 */
 		$.loadingImg(imgs,{
-			//isOrder:true,
-			eachFn:function(count){
+			isOrder:true, //是否有序加载
+			eachFn:function(count){ //每加载一张回调方法
 				console.log('当前加载第'+count+'张图片')
 			},
-			allFn:function(){
+			allFn:function(){ //全部加在完毕回调方法
 				console.log('全部加载完毕')
 			}
 		});
